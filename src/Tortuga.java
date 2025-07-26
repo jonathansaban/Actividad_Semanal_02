@@ -7,16 +7,11 @@
  *
  * @author jotajota
  */
-public class Perro extends Mascota implements Vacunable{
+public class Tortuga extends Mascota{
 
     @Override
     public void hacerSonido() {
-        System.out.println("El perro ladra");
-    }
-
-    @Override
-    public void vacunar() {
-        System.out.println(" el perro ha sido vacunado.");
+        System.out.println("la tortuga hace sonido");
     }
     
 }

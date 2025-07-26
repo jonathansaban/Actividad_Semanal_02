@@ -21,20 +21,26 @@ public class ConsultaVeterinaria {
         mascotas.add(new Perro());
         mascotas.add(new Gato());
         mascotas.add(new Conejo());
-        
+        mascotas.add(new Tortuga()); // nueva mascota
+
         for (int i = 0; i < mascotas.size(); i++) {
             Mascota m = mascotas.get(i);
 
             m.hacerSonido();
             m.descansar();
 
-            // Verificar si requiere atención especial
+            // Verifica si requiere atención especial
             if (m instanceof AtencionEspecial) {
                 AtencionEspecial a = (AtencionEspecial) m;
                 a.recibirAtencionEspecial();
             }
 
-            System.out.println("---");
+            // Verifica si es vacunable
+            if (m instanceof Vacunable) {
+                Vacunable v = (Vacunable) m;
+                v.vacunar();
+            }
+            
         }
         
     }
